@@ -9,7 +9,6 @@ interface PostProps {
 }
 
 export default function Post (props: PostProps) {
-  console.log('Post foi renderizado')
   return <div>
     <h1>{props.post.title}</h1>
     <p>{props.post.content}</p>
