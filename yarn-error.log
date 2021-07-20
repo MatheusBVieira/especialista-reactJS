@@ -1,0 +1,36 @@
+Arguments: 
+  D:\Programas\Node\node.exe D:\Programas\Yarn\bin\yarn.js add styled-componets
+
+PATH: 
+  C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Programas\maven\bin;D:\Programas\Node\;D:\Programas\Git\cmd;C:\Program Files\Java\jdk-12.0.2\bin;D:\Programas\Heroku\bin;;D:\Programas\Yarn\bin\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\Matheus\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Matheus\AppData\Local\Programs\Python\Python39\;C:\Users\Matheus\AppData\Local\Microsoft\WindowsApps;;D:\Programas\Microsoft VS Code\bin;C:\Users\Matheus\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  12.18.4
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/styled-componets: Not found
+      at Request.params.callback [as _callback] (D:\Programas\Yarn\lib\cli.js:66097:18)
+      at Request.self.callback (D:\Programas\Yarn\lib\cli.js:140749:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (D:\Programas\Yarn\lib\cli.js:141721:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (D:\Programas\Yarn\lib\cli.js:141643:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (_stream_readable.js:1220:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
