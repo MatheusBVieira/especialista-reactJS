@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import Heading, { HeadingProps } from '../components/Typography/Heading';
 
 export default {
-  title: 'Typography/Paragraph',
+  title: 'Typography/Heading',
   component: Heading,
   // argTypes: {
   //   backgroundColor: { control: 'color' },
