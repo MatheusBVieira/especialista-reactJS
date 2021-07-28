@@ -24,6 +24,14 @@ const data = {
 
 const options: Chart.ChartOptions = {
   maintainAspectRatio: false,
+  legend: {
+    display: true,
+    position: 'bottom',
+    align: 'center',
+    labels: {
+      usePointStyle: true
+    }
+  },
   scales: {
     yAxes: [
       {
