@@ -40,10 +40,18 @@ const options: Chart.ChartOptions = {
     }
   },
   scales: {
+    xAxes: [
+      {
+        display: true,
+        gridLines: {
+          display: false
+        }
+      }
+    ],
     yAxes: [
       {
         type: 'linear',
-        display: true,
+        display: false,
         position: 'left',
         id: 'cashflow',
       }
