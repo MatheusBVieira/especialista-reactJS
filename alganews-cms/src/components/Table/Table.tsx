@@ -1,4 +1,6 @@
+import { transparentize } from 'polished'
 import { TableInstance } from 'react-table'
+import NoData from '../NoData/NoData'
 import * as T from './Table.styles'
 
 export default function Table<T extends Object> ({ instance }: { instance: TableInstance<T> }) {
@@ -11,6 +13,7 @@ export default function Table<T extends Object> ({ instance }: { instance: Table
   } = instance
 
   return (
+    <>
     <T.Wrapper cellPadding={0} cellSpacing={0} {...getTableProps()}>
       <T.Heading>
         {
@@ -44,5 +47,12 @@ export default function Table<T extends Object> ({ instance }: { instance: Table
         }
       </T.Body>
     </T.Wrapper>
+    {
+      !rows.length && <div style={{ backgroundColor: transparentize(0.95, '#274060') }}>
+        <NoData height={360} />
+      </div>
+    }
+    
+    </>
   )
 }
