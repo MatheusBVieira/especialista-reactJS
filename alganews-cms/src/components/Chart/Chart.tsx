@@ -1,4 +1,7 @@
+import { transparentize } from 'polished';
 import { Line } from 'react-chartjs-2';
+import styled from 'styled-components';
+import Heading from '../Typography/Heading';
 
 const data = {
   labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
@@ -25,7 +28,7 @@ const data = {
 };
 
 const options: Chart.ChartOptions = {
-  maintainAspectRatio: false,
+  maintainAspectRatio: true,
   elements: {
     line: {
       tension: 0
@@ -62,12 +65,24 @@ const options: Chart.ChartOptions = {
 export interface ChartProps {}
 
 export default function Chart () {
-  return <div>
+  return <ChartWrapper style={{ width: 700 }}>
+    <div style={{ marginBottom: 16 }}>
+      <Heading level={3}>
+        {'Média de performance nos últimos 12 meses'}
+      </Heading>
+    </div>
     <Line
       type="line"
-      height={250}
+      height={139}
+      width={600}
       data={data}
       options={options}
     />
-  </div>
+  </ChartWrapper>
 }
+
+const ChartWrapper = styled.div`
+  text-align: center;
+  border: 1px solid ${transparentize(0.9, '#274060')};
+  padding: 20px;
+`
