@@ -24,6 +24,11 @@ const data = {
 
 const options: Chart.ChartOptions = {
   maintainAspectRatio: false,
+  elements: {
+    line: {
+      tension: 0
+    }
+  },
   legend: {
     display: true,
     position: 'bottom',
