@@ -24,7 +24,7 @@ ReactDOM.render(
           <Route path={'/'} exact component={Home} />
           <Route path={'/contato'} exact component={Contact} />
           <Route path={'/usuario/:userId'} component={UserView} />
-          <Route path={'/sum/:a/:b'} component={CalcView} />
+          <Route path={'/calc/:a/:b'} component={CalcView} />
           <Route component={NotFound404} />
         </Switch>
       </BrowserRouter>
