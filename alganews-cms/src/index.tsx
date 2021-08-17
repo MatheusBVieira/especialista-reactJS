@@ -9,17 +9,13 @@ import NotFound404 from './views/NotFound404.view';
 import Contact from './views/Contact.view';
 import UserView from './views/User.view';
 import CalcView from './views/Calc.view';
+import NavBar from './components/NavBar';
 
 ReactDOM.render(
   <React.StrictMode>
     <div>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/contato">Contato</a></li>
-        </ul>
-      </nav>
       <BrowserRouter>
+        <NavBar />
         <Switch>
           <Route path={'/'} exact component={Home} />
           <Route path={'/contato'} exact component={Contact} />
