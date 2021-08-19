@@ -1,3 +1,4 @@
+import confirm from '../../../core/utils/confirm'
 import Logo from '../../components/Logo'
 import NavBar from '../../components/NavBar'
 import SessionController from '../../components/SessionController'
@@ -23,6 +24,11 @@ function DefaultLayout (props: DefaultLayoutProps) {
         <SessionController
           name="Daniel Bonifacio"
           description="editor há 2 anos"
+          onLogout={() => {
+            confirm({
+              title: 'Você tem certeza que quer deslogar?'
+            })
+          }}
         />
       </DL.Aside>
     </DL.Main>
