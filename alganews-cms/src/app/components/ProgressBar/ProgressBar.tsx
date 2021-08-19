@@ -2,23 +2,24 @@ import { transparentize } from "polished"
 import styled from "styled-components"
 
 export interface ProgressBarProps {
-    title: string
-    progress: number
-    theme: 'primary' | 'secondary'
-    width: number
+  title: string
+  progress: number
+  theme: 'primary' | 'secondary'
+  width?: number
 }
 
-export default function ProgressBar(props: ProgressBarProps) {
-    return <ProgressBarWrapper style={{ width: props.width || 'auto' }}>
-        <TextShadow progress={props.progress} theme={props.theme}>
-            {props.title}
-        </TextShadow>
-        <CurrentProgress progress={props.progress} theme={props.theme}>
-            <span>
-                {props.title}
-            </span>
-        </CurrentProgress>
-    </ProgressBarWrapper>
+
+export default function ProgressBar (props: ProgressBarProps) {
+  return <ProgressBarWrapper style={{ width: props.width || 'auto' }}>
+    <TextShadow progress={props.progress} theme={props.theme}>
+      {props.title}
+    </TextShadow>
+    <CurrentProgress progress={props.progress} theme={props.theme}>
+      <span>
+        {props.title}
+      </span>
+    </CurrentProgress>
+  </ProgressBarWrapper>
 }
 
 const ProgressBarWrapper = styled.div`
@@ -29,8 +30,8 @@ const ProgressBarWrapper = styled.div`
 `
 
 const CurrentProgress = styled.div<{
-    progress: number
-    theme: 'primary' | 'secondary'
+  progress: number
+  theme: 'primary' | 'secondary'
 }>`
   height: 100%;
   background-color: ${p => p.theme === 'primary' ? '#09f' : '#274060'};
@@ -48,8 +49,8 @@ const CurrentProgress = styled.div<{
 `
 
 const TextShadow = styled.span<{
-    progress: number
-    theme: 'primary' | 'secondary'
+  progress: number
+  theme: 'primary' | 'secondary'
 }>`
   position: absolute;
   top: 0;
