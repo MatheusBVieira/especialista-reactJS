@@ -14,6 +14,7 @@ export const Wrapper = styled.label`
   }
   
   input {
+    background-color: transparent;
     height: 28px;
     font-size: 18px;
     font-weight: 500;
