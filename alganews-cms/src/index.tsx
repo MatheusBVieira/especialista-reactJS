@@ -10,7 +10,7 @@ import EditorsListView from './app/views/EditorsList.view';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter> 
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/editores" exact component={EditorsListView} />
