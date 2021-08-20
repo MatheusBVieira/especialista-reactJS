@@ -3,7 +3,7 @@ import DefaultLayout from "../layouts/Default";
 
 function EditorProfileView () {
   return <DefaultLayout>
-    <EditorProfile />
+    <EditorProfile hidePersonalData />
   </DefaultLayout>
 }
 
