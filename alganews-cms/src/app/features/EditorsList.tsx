@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import styled from "styled-components";
-import { User } from "../../@types/User";
+import { User } from "../../sdk/@types/User";
+import PostService from "../../sdk/services/Post.service";
 import Profile from "../components/Profile";
 
 export default function EditorsList () {
-  const editors: User.EditorSummary[] = []
+  useEffect(() => {
+    const post = PostService.getExistingPost(1)
+    console.log(post)
+  }, [])
 
   return <EditorsListWrapper>
     <Profile editorId={1} name="Daniel Bonifacio" description="editor há 8 anos" />
