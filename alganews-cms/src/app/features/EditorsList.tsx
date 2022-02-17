@@ -6,7 +6,11 @@ import Profile from "../components/Profile";
 
 export default function EditorsList () {
   useEffect(() => {
-    const post = PostService.getExistingPost(1)
+    const post = PostService.getAllPosts({
+      size: 20,
+      // page: 2,
+      sort: ['id', 'desc']
+    })
     console.log(post)
   }, [])
 
