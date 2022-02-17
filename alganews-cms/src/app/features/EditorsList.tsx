@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import { User } from "../../sdk/@types/User";
 import PostService from "../../sdk/services/Post.service";
 import Profile from "../components/Profile";
 
