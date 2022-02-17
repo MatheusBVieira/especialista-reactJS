@@ -1,5 +1,5 @@
 import Service from "../Service";
-import { File } from '../@types';
+import {File} from '../@types';
 
 class FileService extends Service {
   static getSignedUrl (fileInfo: File.UploadRequestInput) {
@@ -7,6 +7,14 @@ class FileService extends Service {
       .post<File.UploadRequest>('/upload-requests', fileInfo)
       .then(this.getData)
       .then(res => res.uploadSignedUrl)
+  }
+
+  static uploadFileToSignedUrl (signedUrl: string, file: File) {
+    return this.Http
+      .put<{}>(signedUrl, file, {
+        headers: { 'Content-Type': file.type }
+      })
+      .then(this.getData)
   }
 }
 
