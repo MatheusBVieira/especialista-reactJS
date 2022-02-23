@@ -14,9 +14,7 @@ export default function Home () {
       <UserTopTags />
       <UserEarnings />
     </div>
-    <ErrorBoundary component={'performance'}>
-      <UserPerformance />
-    </ErrorBoundary>
+    <UserPerformance />
     <ErrorBoundary component={'lista de posts'}>
       <PostList />
     </ErrorBoundary>

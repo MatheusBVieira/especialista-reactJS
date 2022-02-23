@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
+import withBoundary from "../../core/hoc/withBoundary"
 import transformEditorMonthlyEaningsIntoChartJs from "../../core/utils/transformEditorMonthlyEarningsIntoChartJs"
 import MetricService from "../../sdk/services/Metric.service"
 import Chart, { ChartProps } from "../components/Chart/Chart"
 
-export default function UserPerformance () {
+function UserPerformance () {
   const [editorEarnings, setEditorEarings] = useState<ChartProps['data']>()
   const [error, setError] = useState<Error>()
 
@@ -24,7 +25,9 @@ export default function UserPerformance () {
     return null
 
   return <Chart
-    title="Média de performance nos últimos 12 meses"
+    title="batata"
     data={editorEarnings}
   />
 }
+
+export default withBoundary(UserPerformance, 'Batata')
