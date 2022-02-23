@@ -4,7 +4,7 @@ import { Metric } from "../../sdk/@types";
 import MetricService from "../../sdk/services/Metric.service";
 import CircleChart from "../components/CircleChart";
 
-export default function UserTopTags() {
+export default function UserTopTags () {
   const [topTags, setTopTags] = useState<Metric.EditorTagRatio>([])
 
   useEffect(() => {
@@ -17,6 +17,7 @@ export default function UserTopTags() {
     {
       topTags.map((tag, i) => {
         return <CircleChart
+          key={i}
           progress={tag.percentage}
           caption={tag.tagName}
           theme={i === 0 ? 'primary' : 'default'}
