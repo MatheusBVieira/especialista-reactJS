@@ -4,6 +4,7 @@ import { format } from "date-fns"
 import { useState } from "react"
 import { useEffect } from "react"
 import { useMemo } from "react"
+import Skeleton from "react-loading-skeleton"
 import { Column, useTable } from "react-table"
 import { Post } from "../../sdk/@types"
 import PostService from "../../sdk/services/Post.service"
@@ -92,6 +93,18 @@ export default function PostList () {
     data: posts?.content || [],
     columns
   })
+
+  if (!posts)
+    return <div>
+      <Skeleton height={32} />
+      <Skeleton height={40} />
+      <Skeleton height={40} />
+      <Skeleton height={40} />
+      <Skeleton height={40} />
+      <Skeleton height={40} />
+      <Skeleton height={40} />
+      <Skeleton height={40} />
+    </div>
 
   return <Table
     instance={instance}

@@ -13,7 +13,7 @@ interface EditorProfileProps {
   hidePersonalData?: boolean;
 }
 
-function EditorProfile(props: EditorProfileProps) {
+function EditorProfile (props: EditorProfileProps) {
   const params = useParams<{ id: string }>()
   const [editor, setEditor] = useState<User.EditorDetailed>()
 
@@ -51,8 +51,8 @@ function EditorProfile(props: EditorProfileProps) {
         </Skills>
       </PersonalInfo>
       <ContactInfo>
-        <FieldDescriptor field={'Cidade'} value={'Vila Velha'} />
-        <FieldDescriptor field={'Estado'} value={'Espírito Santo'} />
+        <FieldDescriptor field={'Cidade'} value={editor.location.city} />
+        <FieldDescriptor field={'Estado'} value={editor.location.state} />
         {
           !props.hidePersonalData && <>
             <FieldDescriptor field={'Telefone'} value={'+55 27 99900-9999'} />
